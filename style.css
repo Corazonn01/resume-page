@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+*{
+    font-family: 'Lora', serif;
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background:linear-gradient(to right, #e3f2f1, #bfd4d3);
+}
+
+
+.photo{
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 5px rgba(0, 0, 0, 0.19);
+  border-radius: 200px; 
+  box-shadow: 1 0 20px #666;
+  border: 3px blue;
+}
+
+
+.wrapper{
+    margin: 0 10px;
+}
+
+.wrapper_inner{
+    position: relative;
+    max-width: 1400px;
+    width: 100%;
+    height: 800px;
+    background: #fff;
+    margin: 30px auto;
+    border-radius: 25px;
+    display: flex;
+}
+
+.vertical_wrap{
+    position: relative;
+    height: 100%;
+}
+
+.vertical_bar{
+    width: 260px;
+    background: #DEB887;
+    height: 100%;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    position: relative;
+}
+
+.vertical_bar .profile_info{
+    text-align: center;
+    padding: 50px 25px;
+}
+
+.vertical_bar .profile_info img{
+    width: 150px;
+}
+
+.vertical_bar .profile_info .title{
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.vertical_bar .profile_info .sub_title{
+    font-size: 18px;
+}
+
+.vertical_bar .Menu{
+    padding-left: 25px;
+}
+
+.vertical_bar .Menu li a{
+    display: block;
+    padding: 15px;
+    text-transform: uppercase;
+    color: black;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    margin-bottom: 1px;
+}
+
+.vertical_bar .Menu li a .icon{
+  width: 50px;
+  display: inline-block;
+}
+
+.vertical_bar .Menu li a:hover,
+.vertical_bar .Menu li a:active{
+    background: #DCDCDC;
+    color: #3d6545;
+}
+
+/*social starts*/
+.social{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    } 
+ 
+    .vertical_bar  .body1 {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 100vh;
+     position: absolute;
+     bottom: 50px;
+     width: 100%;
+ }
+ .vertical_bar .social{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 50px;
+   }
+ 
+    
+ .social li a{
+     position: relative;
+     width: 60px;
+     height: 60px;
+     background: #ffffff;
+     color: #242424;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     text-decoration: none;
+     margin: 1em;
+     border-radius: 15%;
+     transition: all .4s;
+ }
+ .social a::before{
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     
+     border-radius: 15%;
+     transform: scale(1.1);
+     z-index: -1;
+     transition: all .4s;
+ }
+
+ .social a:nth-child(2)::before{
+     background: #25d366;
+ }
+ .social a:nth-child(3)::before{
+     background: #1da1f2;
+ }
+ .social a:nth-child(4)::before{
+     background: #7289da;
+ }
+  .social a:hover::before{
+     transform: translateY(10px) scaleX(0.6) scaleY(0.8);
+     filter: blur(10px);
+ }
+ .social a:hover:nth-child(1){
+    color: #c32aa3;
+    text-shadow: 0 0 30px #c32aa3;
+ }
+ .social a:hover:nth-child(2){
+     color: #25d1f2;
+     text-shadow: 0 0 30px #25d366;
+ }
+ .social a:hover:nth-child(3){
+    color: #1da1f2;
+    text-shadow: 0 0 30px #1da1f2;
+ }
+ .social a:hover:nth-child(4){
+    color: #7289da;
+    text-shadow: 0 0 30px #7289da;
+ }
+
+
+
+.main_container{
+    width: calc(100% - 250px);
+}
+
+.main_container .top_bar{
+    height: 60px;
+    background: #DEB887;
+    border-top-right-radius: 25px;
+    padding: 15px 25px;
+    display: flex;
+    align-items: center;
+}
+
+.main_container .nose{
+    color: #F5F5DC;
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 25px;
+    display: none;
+}
+
+.main_container .logo{
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: black;
+}
+
+.main_container .content{
+    padding: 25px;
+    height: calc(100% - 60px);
+    overflow: auto;
+}
+
+.main_container .content .item{
+    background: #DCDCDC;
+    padding: 50px;
+    margin-bottom: 25px;
+    border-top-left-radius: 25px;
+    border-bottom-right-radius:25px ;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+@media (max-width: 768px){
+    .main_container .nose{
+        display: inline-block;
+    }
+    .vertical_wrap{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    visibility: hidden;
+    }
+    .vertical_bar{
+        position: absolute;
+        top: 0;
+        left: -100%;
+        transition: left 0.2s linear;
+    }
+    .vertical_wrap .backdrop{
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 25px;
+        width: 100%;
+        height: 100%;
+    }
+    .main_container{
+        width: 100%;
+    }
+    .main_container .top_bar{
+        border-top-left-radius:25px ;
+    }
+    .wrapper.active .vertical_wrap{
+        visibility: visible;
+    }
+    .wrapper.active .vertical_bar{
+        left: 0;
+        transition: left 0.2 linear;
+
+    }
+}
+
+.about_container{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.Education{
+    animation: text 3s 1;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+.itsme{
+    font-size: 20px;
+    font-weight: 500; 
+}
+
+.meducation{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.Aboutme{
+    animation: text 3s 1;
+    font-size: 20px;
+    font-weight: 600;
+     text-decoration: underline;
+    text-transform: uppercase;
+    }
+
+    .about_text{
+        font-size: 5px;
+    }
+
+@keyframes text{
+    0%{
+        color: #DCDCDC;
+        margin-top: 5%;
+    }
+}
+
+.skills__name{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.Skills{
+    animation: text 3s 1;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+.skills__text{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.skills__name{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/*Languages*/
+*{
+    box-sizing: border-box;
+}
+.Container_languages{
+    width: 100%;
+    background-color: #ddd;
+}
+.skills{
+    text-align: left;
+  padding-top: 3px; 
+  padding-bottom: 3px; 
+  color: black ; 
+}
+
+.Russian {width: 100%; background-color: #20B2AA;}
+.English {width: 80%; background-color: #20B2AA;} 
+.French {width: 50%; background-color: 	#20B2AA;}
+.Spanish {width: 30%; background-color: #20B2AA;}
+.Kazakh {width: 20%; background-color: 	#20B2AA;}
+.Photoshop {width: 50%; background-color: #20B2AA;}
+
+/*Programming*/
+
+.programming{
+    animation: text 3s 1;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+.HTML {width: 90%; background-color: #20B2AA;}
+.CSS {width: 90%; background-color: #20B2AA;} 
+.js {width: 40%; background-color: 	#20B2AA;}
+.php {width: 20%; background-color: #20B2AA;}
+
+
